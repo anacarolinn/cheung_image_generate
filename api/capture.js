@@ -10,8 +10,8 @@ export default async function handler(req, res) {
   try {
     // Inicia o Puppeteer
     const browser = await puppeteer.launch({
-      headless: true, // Garantindo que será headless para funcionar no server
       args: ["--no-sandbox", "--disable-setuid-sandbox"], // Necessário para Vercel
+      headless: true, // Garante que será headless
     });
     const page = await browser.newPage();
 
